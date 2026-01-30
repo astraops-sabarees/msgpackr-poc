@@ -5,7 +5,7 @@ import { json } from './app.data';
 
 @Controller()
 export class AppController {
-  private packr = new Packr({ useRecords: true });
+  private packr = new Packr({ useRecords: true, structuredClone: true });
 
   @Get('json')
   getJson() {
