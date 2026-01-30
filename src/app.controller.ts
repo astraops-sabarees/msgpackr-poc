@@ -17,7 +17,7 @@ export class AppController {
     const largeData = json;
 
     res.set('Content-Type', 'application/msgpack');
-    res.send(Buffer.from(this.packr.pack(largeData)));
+    res.send(this.packr.pack(largeData));
   }
 
   // @Get('msgpack')
